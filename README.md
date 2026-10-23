@@ -20,8 +20,7 @@ Files
 Obfuscation
 
 - JavaScript: "obfuscator.io" (https://obfuscator.io/)
-- HTML: "PHPKobo HTML Obfuscator" (https://www.phpkobo.com/html-obfuscator)
 
 Usage
 
-Open "index.html" in a browser and start exploring.
+Open "https://arpacode.github.io/Arafret/" in a browser and start exploring.

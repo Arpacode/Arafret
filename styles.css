@@ -1,0 +1,168 @@
+:root {
+  --bg:   #19181D;
+  --card: #211F25;
+  --ink: #F1EDF3;
+  --mute: #AAA3B2;
+  --line: #363139;
+  --btn:  #2A272E;
+  --wood: #3B2418;
+  --brass: #D98BA3;            
+  --ok: #83D6B5;
+  box-sizing: border-box;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.5 system-ui, sans-serif;
+}
+
+main {
+  max-width: 850px;
+  margin: auto;
+  padding: 16px;
+}
+
+h1 {
+  font-size: clamp(1.7rem, 5vw, 2.2rem);
+  margin: 4px 0;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.sub {
+  color: var(--mute);
+  margin: 0 0 14px;
+}
+
+
+.card {
+  background: #171d23;
+  border: 1px solid #303943;
+  border-radius: 6px;
+  padding: 14px;
+  margin-bottom: 12px;
+}
+
+
+
+
+
+.q {
+  font-size: 1.15rem;
+  font-weight: 650;
+  margin: 0 0 12px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--mute);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+select {
+  font: inherit;
+  background: var(--btn);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 8px;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+button:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--brass);
+  outline-offset: 3px;
+}
+
+.pill {
+  background: var(--btn);
+  border: 1px solid #3a4652;
+  border-radius: 5px;
+  padding: 9px 14px;
+  font-weight: 600;
+}
+
+.pill[aria-pressed="true"] {
+  background: var(--brass);
+  color: #1a1205;
+  border-color: var(--brass);
+}
+
+.board {
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  border-radius: 9px;
+}
+
+.board svg {
+  display: block;
+  width: 100%;
+  min-width: 590px;
+  height: auto;
+  user-select: none;
+}
+
+.fb {
+  min-height: 3.4em;
+  margin-top: 12px;
+  padding: 10px 12px;
+  border-left: 3px solid var(--brass);
+  border-radius: 0;
+  background: #141a20;
+  overflow-wrap: anywhere;
+}
+
+.mono {
+  font-family: ui-monospace, Consolas, monospace;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media (min-width: 640px) {
+  main { padding: 24px; }
+  .card { padding: 20px; }
+}
+
+#helpCard {
+  opacity: 1;
+  transition: opacity 450ms ease;
+}
+
+#helpCard.fading {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#helpCard.gone {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #helpCard {
+    transition: none;
+  }
+}
